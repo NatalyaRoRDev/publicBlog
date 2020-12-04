@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to @article
     else
-      render action 'new'
+      render action: 'new'
     end
 
   end
