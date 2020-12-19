@@ -2,9 +2,9 @@
   <%= link_to 'All articles', articles_path(@articles) %>
 </div>
 
-<h1><%= @article.title %></h1>
+<h1><i><%= @article.title %></i></h1>
 <p><%= @article.text %></p>
-<p><%= @article.author %></p>
+<p>Author: <%= @article.author %></p>
 
 <h2>Comments:</h2>
 

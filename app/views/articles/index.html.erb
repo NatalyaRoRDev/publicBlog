@@ -1,12 +1,12 @@
 <div class="write_art">
-  <%= link_to 'Write artisle', new_article_path %>
+  <%= link_to 'Write article', new_article_path %>
 </div>
 
 <div class="content">
   <% @articles.reverse.each do |article| %>
-    <h2><%= article.title %></h2>
+    <h2><i><%= article.title %></i></h2>
     <p><%= article.text %></p>
-    <p><%= article.author %></p>
+    <p>Author: <%= article.author %></p>
 
     <%= link_to 'Show', article_path(article) %> |
     <%= link_to 'Edit', edit_article_path(article) %> |
