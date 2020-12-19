@@ -1,12 +1,18 @@
-<% @articles.each do |article| %>
-  <h2><%= article.title %></h2>
-  <p><%= article.text %></p>
-  <p><%= article.author %></p>
+<div class="write_art">
+  <%= link_to 'Write artisle', new_article_path %>
+</div>
 
-  <%= link_to 'Show', article_path(article) %> |
-  <%= link_to 'Edit', edit_article_path(article) %> |
-  <%= link_to 'Destroy', article_path(article),
-  method: :delete, 
-  data: {confirm: 'Do you want to delete the article?'} %>
-  <hr />
-<% end %>
+<div class="content">
+  <% @articles.each do |article| %>
+    <h2><%= article.title %></h2>
+    <p><%= article.text %></p>
+    <p><%= article.author %></p>
+
+    <%= link_to 'Show', article_path(article) %> |
+    <%= link_to 'Edit', edit_article_path(article) %> |
+    <%= link_to 'Destroy', article_path(article),
+     method: :delete, 
+    data: {confirm: 'Do you want to delete the article?'} %>
+    <hr />
+  <% end %>
+</div>
