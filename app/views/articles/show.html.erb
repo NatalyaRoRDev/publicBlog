@@ -8,9 +8,9 @@
 
 <h2>Comments:</h2>
 
-<% @article.comments.each do |comment| %>
+<% @article.comments.reverse.each do |comment| %>
   <p>
-	<i><%= comment.author %>said:</i><br />
+	<i><%= comment.author %></i><br />
 	   <%= comment.body %>
   </p>
 <% end %>

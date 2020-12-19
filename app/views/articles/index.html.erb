@@ -3,7 +3,7 @@
 </div>
 
 <div class="content">
-  <% @articles.each do |article| %>
+  <% @articles.reverse.each do |article| %>
     <h2><%= article.title %></h2>
     <p><%= article.text %></p>
     <p><%= article.author %></p>
